@@ -2,15 +2,17 @@
 title: "We know what to do, so why aren’t we doing it? Closing the EDI Implementation Gap with lessons from EuroHPC, UKRI and Beyond"
 
 
-lead: "Eleanor Broadway"
+lead: "Eleanor Broadway, Marion Weinzierl, Tom Meltzer, Jack Franklin"
 lead_photos:
+  - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
+  - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
+  - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
   - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
 lead_links: ""
 
 
-speaker: "Luigi del Debbio, Bryan Jones, CAKE-CoSeC EDI Working Group"
+speaker: "Luigi del Debbio, Bryan Jones"
 speaker_photos:
-  - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
   - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
   - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
   
