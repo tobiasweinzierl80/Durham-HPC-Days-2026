@@ -28,10 +28,10 @@ lead_links:
 #CONTRIBUTORS
 # Comma-separated list of the contributors of the session
 contributor: ""
-# Leads photos (must match order of names above). 
+# Contributors' photos (must match order of names above). 
 contributor_photos:
   - ""
-# Leads profile links (must match order of names above)
+# Contributors' profile links (must match order of names above)
 contributor_links:
   - ""
 
