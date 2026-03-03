@@ -61,6 +61,10 @@ classes: [full-programme]
   <div class="legend-item social" data-category="social">
     <span class="legend-colour"></span> Socials
   </div>
+  
+    <div class="legend-item meeting" data-category="meeting">
+    <span class="legend-colour"></span> Meetings
+  </div>
 
 </div>
   <div class="week-grid">
@@ -122,7 +126,7 @@ classes: [full-programme]
         {{ s.title }}
       </a>
     </h3>
-{% if s.lead or s.speaker %}
+{% if s.lead or s.instructor or s.facilitator %}
   <p class="speaker">
 
     {% if s.lead %}
@@ -132,11 +136,25 @@ classes: [full-programme]
       {{ s.lead }}
     {% endif %}
 
-    {% if s.lead and s.speaker %} · {% endif %}
+    {% if s.lead and s.instructor %} · {% endif %}
 
+    {% if s.instructor %}
+      <strong>
+        Instructor{% if s.instructor contains "," %}s{% endif %}:
+      </strong>
+      {{ s.instructor }}
+    {% endif %}
+    
+      {% if s.facilitator %}
+      <strong>
+        Facilitator{% if s.facilitator contains "," %}s{% endif %}:
+      </strong>
+      {{ s.facilitator }}
+    {% endif %}
 
   </p>
 {% endif %}
+
     {% if s.room %}<p class="room">Room: {{ s.room }}</p>{% endif %}
   </div>
 {% endfor %}
@@ -362,8 +380,13 @@ classes: [full-programme]
 }
 
 .legend-item.keynote .legend-colour {
-  background-color: #F5DBF2;
+  background-color: #DFDBF5;
   border-color: #78206E;
+}
+
+.legend-item.meeting .legend-colour {
+  background-color: #F5DBF2;
+  border-color: #2E2278;
 }
 
 .legend-item.workshop .legend-colour {
@@ -432,7 +455,8 @@ classes: [full-programme]
 
 
 
-.session-card.keynote { background-color: #F5DBF2; border-left-color: #78206E; }
+.session-card.keynote { background-color: #DFDBF5; border-left-color: #2E2278; }
+.session-card.meeting { background-color: #F5DBF2; border-left-color: #78206E; }
 .session-card.workshop { background-color: #D3E4F5; border-left-color: #194775; }
 .session-card.talk { background-color: #D1E5D2; border-left-color: #315933; }
 .session-card.session { background-color: #F3E5F5; border-left-color: #9C27B0; }

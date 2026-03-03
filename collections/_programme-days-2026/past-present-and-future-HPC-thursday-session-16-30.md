@@ -10,15 +10,17 @@
 # SCHEDULING INFORMATION - COMPLETE INFORMATION
 
 # Full TITLE of the session/tutorial
-title: "Quantum HPC"
+title: "Past, present and future of HPC Services in the UK, and the people who make it work"
 
 
 
 #FACILITATOR
 # Comma-separated list of the leads of the session
-facilitator: "Omer Rathore, James Richings"
+facilitator: "Deepak Aggarwal, Simon Burbidge, Simon Clifford, Marion Weinzierl"
 # Leads photos (must match order of names above). 
 facilitator_photos:
+  - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
+  - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
   - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
   - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
 # Leads profile links (must match order of names above)
@@ -31,7 +33,7 @@ facilitator_links:
 speaker: ""
 # Speakers photos (must match order of names above). 
 speaker_photos:
- - "https://shareing-dri.github.io/assets/profilepics/generic.jpg"
+ - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
 # Speakers profile links (must match order of names above)
 speaker_links:
   - ""
@@ -76,7 +78,7 @@ institution_link: ""
 
 # ORGANISER
 # Comma-separated list of organisers
-organiser: ""
+organiser: "HPC SIG, HPC RSE SIG"
 # Organisers logo
 organiser_logo: ""
 # Organisers website link
@@ -100,7 +102,10 @@ supported_link: ""
 # DESCRIPTION
 
 # Full session description (please use <br> to add a new paragraph). Add requirements if relevant. 
-description: " "
+description: "This is a joint session organised by the HPC SIG and the HPC RSE SIG.
+<br><br>
+We will look back on how past technologies have shaped the sector and the dRTP roles, review current development and challenges, and think about where these developments - in particular the AI boom and recently appointed national supercomputers and resources - will lead the computational research community in the coming years.
+"
    
 
 requirements: ""
@@ -117,17 +122,14 @@ category: "talk"
 
 
 day: "Thursday"
-track: "A"
-start_time: "09:00"
-end_time: "10:30"
+track: "C"
+start_time: "16:30"
+end_time: "18:00"
 
-day_1: "Wednesday"
-start_time_1: "13:00"
-end_time_1: "14:30"
+day_1: "Thursday"
+start_time_1: "16:30"
+end_time_1: "18:00"
 
-day_2: "Thursday"
-start_time_2: "09:00"
-end_time_2: "10:30"
 
 
 

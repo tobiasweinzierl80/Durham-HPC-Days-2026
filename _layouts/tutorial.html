@@ -16,11 +16,11 @@ layout: default
         {% endfor %}
       </p>
           {% endif %}
-    {% if page.speaker %}
-      {% assign sp_count = page.speaker | split: "," | size %}
+    {% if page.instructor %}
+  {% assign sp_count = page.instructor | split: "," | size %}
       <p class="instructors">
-        <strong>Speaker{% if sp_count > 1 %}s{% endif %}:</strong>
-        {% assign speakers = page.speaker | split: "," %}
+        <strong>Instructor{% if sp_count > 1 %}s{% endif %}:</strong>
+      {% assign speakers = page.instructor | split: "," %}
         {% for sp in speakers %}
           {{ sp | strip }}{% if forloop.last == false %}, {% endif %}
         {% endfor %}
@@ -119,70 +119,117 @@ layout: default
     
     
         
-        
-            {% if page.speaker %}
-      <div class="sidebar-section speakers">
-        <h3>Speaker{% if sp_count > 1 %}s{% endif %}</h3>
-        {% assign speakers = page.speaker | split: "," %}
-        {% for sp in speakers %}
-          <div class="speaker-card">
-            {% if page.speaker_photos and page.speaker_photos[forloop.index0] %}
-             <img
-  class="speaker-photo"
-  src="{{ page.speaker_photos[forloop.index0] }}"
-  alt="{{ sp | strip }}">
+   {% if page.instructor != blank %}
+  {% assign speakers = page.instructor | split: "," %}
+  {% assign sp_count = speakers | size %}
 
-            {% endif %}
-            
-            
-            
-            {% if page.speaker_links and page.speaker_links[forloop.index0] %}
-              <p><a href="{{ page.speaker_links[forloop.index0] }}" target="_blank">{{ sp | strip }}</a></p>
-            {% else %}
-              <p>{{ sp | strip }}</p>
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-            
-        
-            {% if page.institutions and page.institutions != "TBC" %}
-      <div class="sidebar-section  institution">
-        <h3>Institution</h3>
-        {% if page.institution_logo %}
-<div class="sidebar-section-logo">
-  <img
-    src="{{ page.institution_logo }}">
-</div>
+  <div class="sidebar-section speakers">
+    <h3>Instructor{% if sp_count > 1 %}s{% endif %}</h3>
+
+    {% for sp in speakers %}
+      {% assign clean_name = sp | strip %}
+      {% assign photo = page.instructor_photos[forloop.index0] %}
+      {% assign link = page.instructor_links[forloop.index0] %}
+
+      <div class="speaker-card">
+
+        {% if photo != blank %}
+          <img
+            class="speaker-photo"
+            src="{{ photo }}"
+            alt="{{ clean_name }}">
         {% endif %}
-        
-        {% if page.institution_link %}
-          <p><a href="{{ page.institution_link }}" target="_blank">{{ page.institutions }}</a></p>
+
+        {% if link != blank %}
+          <p>
+            <a href="{{ link }}" target="_blank">
+              {{ clean_name }}
+            </a>
+          </p>
         {% else %}
-          <p>{{ page.institutions }}</p>
+          <p>{{ clean_name }}</p>
         {% endif %}
+
       </div>
-    {% endif %}
-    
-            {% if page.organiser and page.organiser != "TBC" %}
-      <div class="sidebar-section  institution">
-        <h3>Organiser</h3>
-        {% if page.organiser_logo %}
-<div class="sidebar-section-logo">
-  <img
-    src="{{ page.organiser_logo }}">
-</div>
-        {% endif %}
-        
-        {% if page.organiser_link %}
-          <p><a href="{{ page.organiser_link }}" target="_blank">{{ page.organiser }}</a></p>
-        {% else %}
-          <p>{{ page.organiser }}</p>
-        {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+
+
+            
+{% if page.institution != blank or page.institution_logo != blank %}
+  <div class="sidebar-section institution">
+    <h3>Institution</h3>
+
+    {% if page.institution_logo != blank %}
+      <div class="sidebar-section-logo">
+        <a href="{{ page.institution_link }}" target="_blank">
+          <img 
+            src="{{ page.institution_logo }}" 
+            alt="{{ page.institution | strip }}">
+        </a>
       </div>
+    {% elsif page.institution != blank %}
+      {% if page.institution_link != blank %}
+        <p><a href="{{ page.institution_link }}" target="_blank">{{ page.institution }}</a></p>
+      {% else %}
+        <p>{{ page.institution }}</p>
+      {% endif %}
     {% endif %}
+
+  </div>
+{% endif %}
     
+    
+    
+    
+{% if page.organiser != blank or page.organiser_logo != blank %}
+  <div class="sidebar-section institution">
+    <h3>Organised by</h3>
+
+    {% if page.organiser_logo != blank %}
+      <div class="sidebar-section-logo">
+        <a href="{{ page.organiser_link }}" target="_blank">
+          <img 
+            src="{{ page.organiser_logo }}" 
+            alt="{{ page.organiser | strip }}">
+        </a>
+      </div>
+    {% elsif page.organiser != blank %}
+      {% if page.organiser_link != blank %}
+        <p><a href="{{ page.organiser_link }}" target="_blank">{{ page.organiser }}</a></p>
+      {% else %}
+        <p>{{ page.organiser }}</p>
+      {% endif %}
+    {% endif %}
+
+  </div>
+{% endif %}
+    
+   {% if page.supported != blank or page.supported_logo != blank %}
+  <div class="sidebar-section institution">
+    <h3>Supported by</h3>
+
+    {% if page.supported_logo != blank %}
+      <div class="sidebar-section-logo">
+        <a href="{{ page.supported_link }}" target="_blank">
+          <img 
+            src="{{ page.supported_logo }}" 
+            alt="{{ page.supported | strip }}">
+        </a>
+      </div>
+    {% elsif page.supported != blank %}
+      {% if page.supported_link != blank %}
+        <p><a href="{{ page.supported_link }}" target="_blank">{{ page.supported }}</a></p>
+      {% else %}
+        <p>{{ page.supported }}</p>
+      {% endif %}
+    {% endif %}
+
+  </div>
+{% endif %}
     
     
     
@@ -204,21 +251,23 @@ layout: default
       </section>
     {% endif %}
 
-    {% if page.requirements and page.requirements != "TBC" %}
-      <section>
-        <h2>Requirements</h2>
-        {% if page.requirements contains "," %}
-          <ul>
-            {% assign reqs = page.requirements | split: "," %}
-            {% for req in reqs %}
-              <li>{{ req | strip }}</li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          <p>{{ page.requirements }}</p>
-        {% endif %}
-      </section>
-    {% endif %}
+   {% if page.requirements != blank and page.requirements != "TBC" %}
+    <section>
+      <h2>Requirements</h2>
+
+      {% if page.requirements contains "," %}
+        <ul>
+          {% assign reqs = page.requirements | split: "," %}
+          {% for req in reqs %}
+            <li>{{ req | strip }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ page.requirements }}</p>
+      {% endif %}
+
+    </section>
+  {% endif %}
 
   </main>
 </div>

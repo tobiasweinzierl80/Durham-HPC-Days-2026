@@ -6,22 +6,22 @@ layout: default
 <section class="session-hero fade-in">
   <div class="session-hero-content">
     <h1>{{ page.title }}</h1>
-{% if page.facilitator %}
-      {% assign sp_count = page.facilitator | split: "," | size %}
+{% if page.lead %}
+      {% assign sp_count = page.lead | split: "," | size %}
       <p class="instructors">
-        <strong>Facilitator{% if sp_count > 1 %}s{% endif %}:</strong>
-        {% assign facilitators = page.facilitator | split: "," %}
-        {% for sp in facilitators %}
+        <strong>Lead{% if sp_count > 1 %}s{% endif %}:</strong>
+        {% assign leads = page.lead | split: "," %}
+        {% for sp in leads %}
           {{ sp | strip }}{% if forloop.last == false %}, {% endif %}
         {% endfor %}
       </p>
           {% endif %}
-{%- if page.speaker != blank -%}
-      {% assign speakers = page.speaker| split: "," %}
-      {% assign speaker_count = speakers | size %}
+{%- if page.contributor != blank -%}
+      {% assign contributors = page.contributor | split: "," %}
+      {% assign contributor_count = contributors | size %}
       <p class="instructors">
-        <strong>Speaker{% if speaker_count > 1 %}s{% endif %}:</strong>
-        {% for person in speakers %}
+        <strong>Contributor{% if contributor_count > 1 %}s{% endif %}:</strong>
+        {% for person in contributors %}
           {{ person | strip }}{% unless forloop.last %}, {% endunless %}
         {% endfor %}
       </p>
@@ -89,17 +89,17 @@ layout: default
 
     
         
-   {% if page.facilitator != blank %}
-  {% assign speakers = page.facilitator | split: "," %}
+   {% if page.lead != blank %}
+  {% assign speakers = page.lead | split: "," %}
   {% assign sp_count = speakers | size %}
 
   <div class="sidebar-section speakers">
-    <h3>Facilitator{% if sp_count > 1 %}s{% endif %}</h3>
+    <h3>Lead{% if sp_count > 1 %}s{% endif %}</h3>
 
     {% for sp in speakers %}
       {% assign clean_name = sp | strip %}
-      {% assign photo = page.facilitator_photos[forloop.index0] %}
-      {% assign link = page.facilitator_links[forloop.index0] %}
+      {% assign photo = page.lead_photos[forloop.index0] %}
+      {% assign link = page.lead_links[forloop.index0] %}
 
       <div class="speaker-card">
 
@@ -127,17 +127,17 @@ layout: default
 
 
 
-{% if page.speaker != blank %}
-  {% assign speaker = page.speaker | split: "," %}
-  {% assign count = speaker | size %}
+{% if page.contributor != blank %}
+  {% assign contributor = page.contributor | split: "," %}
+  {% assign count = contributor | size %}
 
   <div class="sidebar-section speakers">
-    <h3>Speaker{% if count > 1 %}s{% endif %}</h3>
+    <h3>Contributor{% if count > 1 %}s{% endif %}</h3>
 
-    {% for person in speaker %}
+    {% for person in contributor %}
       {% assign clean_name = person | strip %}
-      {% assign photo = page.speaker_photos[forloop.index0] %}
-      {% assign link = page.speaker_links[forloop.index0] %}
+      {% assign photo = page.contributor_photos[forloop.index0] %}
+      {% assign link = page.contributor_links[forloop.index0] %}
 
       <div class="speaker-card">
 
@@ -239,7 +239,6 @@ layout: default
 {% endif %}
     
     
-    
 
 
 
@@ -281,7 +280,7 @@ layout: default
 
 <style>
 .session-hero {
-  background: linear-gradient(90deg, #65AB68 0%, #002A41 100%);
+  background: linear-gradient(90deg, #78206E 0%, #002A41 100%);
   color: #fff;
   text-align: center;
   padding: 3rem 1rem;
@@ -436,19 +435,10 @@ ul {
     padding: 0.8rem 1rem;
     border-radius: 16px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-
-}
-.session-sidebar .sidebar-section {
-  grid-column: 1;
-}
-
-.session-sidebar .sidebar-section.speakers:first-of-type {
-  grid-column: 2;
-}
-
-.session-sidebar .sidebar-section.speakers:last-of-type {
-  grid-column: 1 / -1;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
 
   .session-sidebar .sidebar-section {
     margin: 0;
@@ -468,10 +458,6 @@ ul {
     margin: 0 0 0.15rem 0;
     font-weight: 600;
   }
-  
-  .sidebar-section.speakers h3 {
-  grid-column: 1 / -1;
-}
 
   .session-sidebar p,
   .session-sidebar a {
@@ -492,32 +478,30 @@ ul {
   }
 
   .sidebar-section-logo img {
-    display: none;
+    width: 80px;
+    height: 80px;
+    margin-top:0.2rem;
+    margin-bottom:0.2rem;
+    object-fit: cover;
+    display: block;
   }
 
- .sidebar-section.speakers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-}
+  .speaker-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.3rem 0 0 0;
+  }
 
-
-.speaker-card {
-  background: #f8fafc;
-  padding: 0.6rem;
-  border-radius: 12px;
-
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.4rem;
-  margin: 0;
-}
-
-.speaker-photo {
-  width: 70px;
-  height: 70px;
-}
+  .speaker-photo {
+    width: 80px;
+    height: 80px;
+    margin-top:0.2rem;
+    margin-bottom:0.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
 
   .session-content {
     order: 2;
