@@ -8,7 +8,7 @@ $text-color: #002A41 !default;
 $muted-text-color: #002A41 !default;
 $primary-color: #002A41 !default;
 $border-color: mix(#fff, #002A41, 5%) !default;
-$footer-background-color: mix(#ffffff, $background-color, 90%) !default;
+$footer-background-color: mix(#ffffff, $background-color, 90%) !important;
 $link-color: #393e46 !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
