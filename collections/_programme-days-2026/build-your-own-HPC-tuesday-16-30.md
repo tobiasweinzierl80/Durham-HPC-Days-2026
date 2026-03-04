@@ -19,10 +19,13 @@ title: "Build your own HPC - hands-on session with Raspberry Pis"
 lead: "Jannetta Steyn"
 # Leads photos (must match order of names above). 
 lead_photos:
-  - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
+  - "https://rse.ncldata.dev/images/team/jannetta.png"
 # Leads profile links (must match order of names above)
 lead_links:
-  - ""
+  - "https://rse.ncldata.dev/images/team/jannetta.png"
+  - "https://hachyderm.io/@jannettas"
+  - "https://bsky.app/profile/jannettas.bsky.social"
+  - "https://www.linkedin.com/in/jannetta/"
 
 
 #SPEAKERS
