@@ -16,7 +16,7 @@ classes: [full-programme]
 {% assign time_slots = all_sessions | map: "start_time" | uniq | sort %}
 
 {% assign fixed_sessions = 
-  "10:30|Coffee Break,12:00|Lunch,16:00|Coffee Break" | split: "," %}
+  "10:30|Coffee Break,12:00|Lunch,,14:30|Break,16:00|Coffee Break" | split: "," %}
 
 
 {% for fs in fixed_sessions %}
