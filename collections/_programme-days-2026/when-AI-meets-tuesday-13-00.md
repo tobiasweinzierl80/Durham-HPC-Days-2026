@@ -10,16 +10,17 @@
 # SCHEDULING INFORMATION - COMPLETE INFORMATION
 
 # Full TITLE of the session/tutorial
-title: "When AI meets petascale computing: lessons from astronomy"
+title: "Science & AI"
 
 
 
 #FACILITATOR
 # Comma-separated list of the leads of the session
-lead: "Fawada Qaiser"
+lead: "Fawada Qaiser, Jeyan Thiyagalingam"
 # Leads photos (must match order of names above). 
 lead_photos:
-  - "https://github.com/hpc-days/Durham-HPC-Days-2026/blob/main/assets/images/generic.jpg?raw=true"
+  - "https://raw.githubusercontent.com/hpc-days/Durham-HPC-Days-2026/refs/heads/main/assets/images/generic.jpg"
+  - "https://raw.githubusercontent.com/hpc-days/Durham-HPC-Days-2026/refs/heads/main/assets/images/generic.jpg"
 # Leads profile links (must match order of names above)
 lead_links:
   - ""
@@ -99,10 +100,15 @@ supported_link: ""
 # DESCRIPTION
 
 # Full session description (please use <br> to add a new paragraph). Add requirements if relevant. 
-description: "Modern astronomy operates at petascale; from sky surveys generating millions of images per night to large-scale cosmological simulations. This session examines how AI and HPC intersect in astronomy, highlighting real computational challenges and lessons that generalise to other disciplines. We explore how AI models are trained, deployed, and validated on HPC infrastructure, and what this teaches us about scaling AI beyond the cloud."
+description: ""
    
 
 requirements: ""
+
+
+# -------------------------
+# SCHEDULING INFORMATION - PLEASE DO NOT TOUCH THIS PART
+# -------------------------
 
 
 # -------------------------
