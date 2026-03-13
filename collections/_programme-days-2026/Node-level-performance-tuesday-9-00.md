@@ -18,8 +18,8 @@ instructor: "Georg Hager, Thomas Gruber"
 
 # INSTRUCTORS photos (must match order of names above). 
 instructor_photos:
-  - "assets/images/generic.jpg"
-  - "assets/images/generic.jpg"
+  - /assets/images/generic.jpg
+  - /assets/images/generic.jpg
   
 # Instructor profile links (must match order of names above)
 instructor_links:

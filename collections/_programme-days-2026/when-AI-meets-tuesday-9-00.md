@@ -31,7 +31,7 @@ lead_links:
 contributor: ""
 # Speakers photos (must match order of names above). 
 contributor_photos:
-  - "assets/images/generic.jpg""
+  - "assets/images/generic.jpg"
 # Speakers profile links (must match order of names above)
 contributor_links:
   - ""
