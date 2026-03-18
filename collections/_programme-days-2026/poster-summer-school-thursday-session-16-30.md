@@ -1,9 +1,9 @@
 ---
 title: "Summer School Poster Session"
-day: "Wednesday"
+day: "Friday"
 track: "C"
-start_time: "16:30"
-end_time: "18:00"
+start_time: "13:00"
+end_time: "14:30"
 room: "Mountjoy Centre"
 layout: session
 category: "Poster"
