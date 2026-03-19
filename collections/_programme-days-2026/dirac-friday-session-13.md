@@ -16,10 +16,10 @@ title: "DiRAC"
 
 #FACILITATOR
 # Comma-separated list of the leads of the session
-facilitator: "DiRAC"
+facilitator: "Simon Hands"
 # Leads photos (must match order of names above). 
 facilitator_photos:
-  - ""
+  - "assets/images/generic.jpg"
 # Leads profile links (must match order of names above)
 facilitator_links:
   - ""
@@ -119,15 +119,12 @@ day: "Friday"
 track: "A"
 
 start_time: "13:00"
-end_time: "14:30"
+end_time: "15:00"
 
 day_1: "Friday"
-start_time_1: "09:00"
-end_time_1: "10:30"
+start_time_1: "13:00"
+end_time_1: "15:00"
 
-day_2: "Friday"
-start_time_2: "13:00"
-end_time_2: "14:30"
 
 
 
