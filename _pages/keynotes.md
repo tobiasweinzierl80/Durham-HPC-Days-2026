@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: "Workshops"
-permalink: /workshops/
+title: "Keyontes"
+permalink: /keynotes/
 classes: wide
 
 ---
@@ -29,21 +29,23 @@ classes: wide
   .ws-hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(0, 42, 65, 0.92) 0%,
-      rgba(41, 117, 193, 0.70) 60%,
-      rgba(0, 42, 65, 0.50) 100%
-    );
+  background: 
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+linear-gradient(
+  135deg,
+  rgba(50, 15, 55, 0.95) 0%,   
+  rgba(104, 36, 109, 0.80) 55%, 
+  rgba(104, 36, 109, 0.55) 100%
+);
   }
 
-  /* Decorative grid lines */
+
   .ws-hero__grid {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+   linear-gradient(rgba(255, 220, 120, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 220, 120, 0.06) 1px, transparent 1px);
     background-size: 48px 48px;
     pointer-events: none;
   }
@@ -72,7 +74,7 @@ classes: wide
     display: block;
     width: 28px;
     height: 2px;
-    background: #5ba8f5;
+  background: #ffffff;
     border-radius: 2px;
   }
 
@@ -137,7 +139,7 @@ classes: wide
   min-height: 150px;
 
   transition: all 0.25s ease;
-  border-top: 6px solid #2975C1;
+ border-top: 6px solid #68246D;
 }
 
 
@@ -182,7 +184,7 @@ classes: wide
 }
 
 .about-button:hover {
-  background: #2975C1;
+  background: #68246D;
   transform: scale(1.05);
 }
 
@@ -294,21 +296,21 @@ classes: wide
   <div class="ws-hero__grid"></div>
   <div class="ws-hero__content">
     <p class="ws-hero__eyebrow">Durham HPC Days 2026</p>
-    <h1>Workshops </h1>
+    <h1>Keynotes</h1>
     <p class="ws-hero__sub">
-    Click on any workshop below to see details.</p>
+    Click on any keynote below to see details.</p>
   </div>
 </section>
 
 <section class="description">
   <p>
-    Welcome to the Durham HPC Days 2026 workshops. 
-    Click on any workshop below to see details.
+    Welcome to the Durham HPC Days 2026 keynotes. 
+    Click on any keynotes below to see details.
   </p>
 </section>
 
 <section class="about-grid">
- {% assign workshops_raw = site.programme-days-2026 | where: "category", "workshop" %}
+ {% assign workshops_raw = site.programme-days-2026 | where: "category", "keynote" %}
 
 {% assign sortable_list = "" | split: "" %}
 
@@ -409,7 +411,7 @@ classes: wide
 </div>
 
   <a href="{{ workshop.url | relative_url }}" class="about-button">
-    View Workshop
+    View Keynote
   </a>
 
 </div>

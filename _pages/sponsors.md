@@ -39,13 +39,117 @@ permalink: /sponsors/
   font-size: 1.3rem;
   opacity: 0.95;
 }
+
+.sponsors-strip {
+  padding: 1rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.sponsors-container {
+  max-width: 1100px;
+}
+
+.sponsors-strip h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #68246D;
+  font-weight: 600;
+}
+
+/* Grid */
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Logo card */
+.sponsor-logo {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+  aspect-ratio: 1 / 1;         
+  width: 100%;
+
+  display: flex;               
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  transition: all 0.25s ease;
+}
+
+.sponsor-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Logo image */
+.sponsor-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+
+  opacity: 0.85;
+  transition: all 0.25s ease;
+}
+
+
+
 </style>
+
+
+<section class="sponsors-strip">
+  <div class="sponsors-container">
+    <h2>Our Sponsors</h2>
+
+    <div class="sponsors-grid">
+
+      <!-- Sponsor -->
+      <a href="https://www.ddn.com" target="_blank" rel="noopener noreferrer">
+      <div class="sponsor-logo">
+        <img src="https://www.ddn.com/wp-content/uploads/2024/09/ddn-logo-dark-horizontal-rgb.jpg" alt="ddn">
+      </div>
+      </a>
+      
+      
+      
+<a href="https://ocf.co.uk/" target="_blank" rel="noopener noreferrer">
+      <div class="sponsor-logo">
+        <img src="https://ocf.co.uk/images/logoblue.png" alt="OCF">
+      </div>
+       </a>
+      
+      
+      
+      
+<a href="https://eu.fsastech.com/eu/" target="_blank" rel="noopener noreferrer">
+      <div class="sponsor-logo">
+        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFz2Hw6LVRJlg/company-logo_200_200/B4DZWPBwyvHYAI-/0/1741861359139?e=2147483647&v=beta&t=sLukj4LFeyoCCButXJ0ICGVDUN3dEz_FDbeicBq3pNM" alt="Fsas Technologies">
+      </div>
+      </a>
+      
+      
+ <a href="https://www.novatech.co.uk/" target="_blank" rel="noopener noreferrer">     
+      <div class="sponsor-logo">
+        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQERb5GeBVwP7g/company-logo_200_200/company-logo_200_200/0/1688369383296/novatech_logo?e=2147483647&v=beta&t=DlfqUR3v9c8B9qftCRLVBJ4nlTTSYiolK0OFNqu5Fw8" alt="novatech">
+      </div>
+      </a>
+
+      <!-- Add more as needed -->
+
+    </div>
+  </div>
+</section>
 
 <br><br>
 <section style="background: linear-gradient(180deg, #0b132b 0%, #1c2541 100%); color: #fff; padding: 4rem 2rem; border-radius: 12px;">
   <div style="max-width: 950px; margin: 0 auto; text-align: center;">
     <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Sponsor & Supporter Information</h1>
-    <img src="assets/images/HPCDaysSponsors.png" alt="HPC Days sponsors"/>
+    
     <p style="font-size: 1.15rem; line-height: 1.7; opacity: 0.9; margin-bottom: 2.5rem;">
      If you are sponsoring and supporting HPC Days 2026, thank you very much! We would not be able to run the event without you!
 This page will hopefully include the information that you need to make a success of the event, but if there is information missing please contact us.

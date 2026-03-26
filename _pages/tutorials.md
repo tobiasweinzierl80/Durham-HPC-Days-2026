@@ -298,7 +298,7 @@ border-top: 6px solid #f5b800;
     <p class="ws-hero__eyebrow">Durham HPC Days 2026</p>
     <h1>Tutorials</h1>
     <p class="ws-hero__sub">
-    Click on any workshop below to see details.</p>
+    Click on any tutorial below to see details.</p>
   </div>
 </section>
 
@@ -411,7 +411,7 @@ border-top: 6px solid #f5b800;
 </div>
 
   <a href="{{ workshop.url | relative_url }}" class="about-button">
-    View Workshop
+    View Tutorials
   </a>
 
 </div>
