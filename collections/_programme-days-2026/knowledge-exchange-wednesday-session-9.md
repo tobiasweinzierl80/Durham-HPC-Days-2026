@@ -31,12 +31,12 @@ speaker: "Joe Wallwork, Lewis Sampson, Louise Chisholm"
 # Speakers photos (must match order of names above). 
 speaker_photos:
   - "assets/images/generic.jpg"
-  - "assets/images/generic.jpg"
+  - "assets/images/lewis-stfc-dafni.jpg"
   - "assets/images/generic.jpg"
 # Speakers profile links (must match order of names above)
 speaker_links:
   - ""
-  - ""
+  - "https://www.sc.stfc.ac.uk/programmes/dafni/"
   - ""
 
 
