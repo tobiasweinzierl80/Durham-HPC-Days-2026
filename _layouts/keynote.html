@@ -9,7 +9,7 @@ layout: default
 {% if page.lead_photos and page.lead_photos[0] %}
   <div class="keynote-photo-wrapper">
     <img 
-      src="{{ page.lead_photos[0] }}" 
+      src="{{ page.lead_photos[0] | relative_url  }}" 
       alt="{{ page.lead }}"
       class="keynote-photo">
   </div>
@@ -139,7 +139,7 @@ layout: default
         {% if page.institution_logo %}
 <div class="sidebar-section-logo">
   <img
-    src="{{ page.institution_logo }}">
+    src="{{ page.institution_logo | relative_url }}">
 </div>
         {% endif %}
         
@@ -157,7 +157,7 @@ layout: default
         {% if page.organiser_logo %}
 <div class="sidebar-section-logo">
   <img
-    src="{{ page.organiser_logo }}">
+    src="{{ page.organiser_logo | relative_url  }}">
 </div>
         {% endif %}
         

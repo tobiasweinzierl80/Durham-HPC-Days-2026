@@ -174,7 +174,7 @@ layout: default
       <div class="sidebar-section-logo">
         <a href="{{ page.institution_link }}" target="_blank">
           <img 
-            src="{{ page.institution_logo }}" 
+            src="{{ page.institution_logo | relative_url  }}" 
             alt="{{ page.institution | strip }}">
         </a>
       </div>
@@ -200,7 +200,7 @@ layout: default
       <div class="sidebar-section-logo">
         <a href="{{ page.organiser_link }}" target="_blank">
           <img 
-            src="{{ page.organiser_logo }}" 
+            src="{{ page.organiser_logo | relative_url  }}" 
             alt="{{ page.organiser | strip }}">
         </a>
       </div>
@@ -223,7 +223,7 @@ layout: default
       <div class="sidebar-section-logo">
         <a href="{{ page.supported_link }}" target="_blank">
           <img 
-            src="{{ page.supported_logo }}" 
+            src="{{ page.supported_logo | relative_url  }}" 
             alt="{{ page.supported | strip }}">
         </a>
       </div>

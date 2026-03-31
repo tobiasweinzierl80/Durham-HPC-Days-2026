@@ -221,9 +221,9 @@ layout: default
 
     {% if page.supported_logo != blank %}
       <div class="sidebar-section-logo">
-        <a href="{{ page.supported_link }}" target="_blank">
+        <a href="{{ page.supported_link  | relative_url }}}}" target="_blank">
           <img 
-            src="{{ page.supported_logo }}" 
+            src="{{ page.supported_logo | relative_url }}" 
             alt="{{ page.supported | strip }}">
         </a>
       </div>
