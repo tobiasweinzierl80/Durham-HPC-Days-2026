@@ -33,7 +33,7 @@ classes: [full-programme]
   <div class="mobile-landing-inner">
     <h1>Durham HPC Days 2026</h1>
     <p class="subtitle">Conference Programme - Mobile Version</p>
-    <a href="/programme-hpcdays-days-2026/" class="btn-see-programme">See Full Programme</a>
+    <a href="/programme-days/" class="btn-see-programme">See Full Programme</a>
   </div>
 </div>
 <div class="programme-container">
