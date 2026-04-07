@@ -1257,6 +1257,12 @@ t {
   
 }
 
+@media (max-width: 900px) {
+  .ws-hero {
+    background-attachment: scroll;
+  }
+}
+
 </style>
 
 
