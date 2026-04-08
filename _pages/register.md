@@ -39,7 +39,12 @@ permalink: /register/
   opacity: 0.95;
 }
 
-
+.price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.8rem 0 0.8rem;
+  color: #002A41;
+}
 /* REGISTER CARD */
 .card-highlight {
   background: white;
@@ -134,13 +139,114 @@ ul.checklist li::before {
 
 
 @media (max-width: 768px) {
-  .parallax-hero {
-    background-attachment: scroll; 
-    background-position: center top; 
-    height: 40vh;                  
-  }
-}
 
+  /* HERO */
+  .parallax-hero {
+    height: 32vh;
+    min-height: 180px;
+    background-attachment: scroll;
+    background-position: center;
+  }
+
+  .parallax-hero h1 {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .parallax-overlay {
+    padding: 1.2rem 1.5rem;
+    margin: 0 1rem;
+    border-radius: 10px;
+  }
+
+  .parallax-hero p {
+    font-size: 1rem;
+  }
+
+  /* MAIN SECTION */
+  .section-register {
+    padding: 1.8rem 1rem;
+  }
+
+  .section-register h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  /* CARD */
+  .card-highlight {
+    padding: 1.6rem 1.2rem;
+    border-left: 4px solid #68246D;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  .card-highlight p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* PRICE */
+  .price {
+    font-size: 1.2rem;
+    margin: 0.6rem 0 0.8rem;
+  }
+
+  /* BUTTON */
+  .register-button {
+    width: 100%;
+    max-width: 320px;
+    margin: 1.2rem auto 0;
+    display: block;
+    text-align: center;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .register-button:hover {
+    transform: none; /* avoid weird zoom on mobile */
+  }
+
+  /* SMALL TEXT */
+  .small-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* INFO BLOCKS */
+  .info-centred {
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .info-centred h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .info-centred ul {
+    padding-left: 1rem;
+  }
+
+  .info-centred li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* CHECKLIST */
+  ul.checklist li {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* TRAVEL / ACCOMMODATION TEXT FIX */
+  .info-centred ul br {
+    display: none; /* remove messy line breaks */
+  }
+
+}
 
 </style>
 
@@ -157,7 +263,9 @@ ul.checklist li::before {
       Secure your place at <strong>Durham HPC Days 2026</strong>, a leading UK event
       in High Performance Computing, hosted at Durham University.
     </p>
-    
+<p class="price">
+  🎟️ Registration fee: <strong>£50</strong>
+</p>
       
 
     <a class="register-button"
@@ -171,7 +279,7 @@ ul.checklist li::before {
     </p>
     
         <p class="small-text">
-      Lunch and light dinners will be provided to all registered attendees throughout the conference week. These meals are kindly subsidised by our sponsors. Please note that there will not be a dedicated conference dinner event.
+      Lunch and light dinners will be provided to all registered attendees throughout the conference week. These meals are kindly subsidised by our sponsors.
     </p>
     
   </div>

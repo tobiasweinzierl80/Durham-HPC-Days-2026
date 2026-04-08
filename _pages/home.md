@@ -50,7 +50,7 @@ hidden: true
     Discover the full schedule of keynotes, technical sessions, and social events for the upcoming conference.
     Check the programme to plan your participation and make the most of your experience at Durham HPC Days.<br>
   </t><br>
-  <a href="https://hpc-days.github.io/Durham-HPC-Days-2026/programme-hpcdays-2026/" class="btn btn-purple">Full programme coming up soon</a>
+  <a href="https://hpc-days.github.io/Durham-HPC-Days-2026/programme-week-2026/" class="btn btn-purple">Check out the programme</a>
 </section>
 
 
@@ -66,22 +66,13 @@ hidden: true
 </section>
 
 
-<section class="ws-hero ws-hero-sessions full-bleed">
-  <div class="ws-keynotes ws-hero__overlay"></div>
-  <div class="ws-keynotes-grid ws-hero__grid"></div>
-  <div class="ws-hero__content">
-    <h1>Keynotes</h1>
-    <a href="/" class="ws-hero-cta">
-  Coming up soon <span>→</span>
-</a>
-  </div>
-</section>
+
 <section class="ws-hero ws-hero-sessions full-bleed">
   <div class="ws-talks ws-hero__overlay"></div>
   <div class="ws-talks-grid ws-hero__grid"></div>
   <div class="ws-hero__content">
-    <h1>Talks</h1> <a href="" class="ws-hero-cta">
-  Coming up soon <span>→</span>
+    <h1>Talks</h1>     <a href="https://hpc-days.github.io/Durham-HPC-Days-2026/talks/" class="ws-hero-cta">
+  Explore talks <span>→</span>
 </a>
   </div>
 </section>
@@ -90,8 +81,8 @@ hidden: true
   <div class="ws-workshops-grid ws-hero__grid"></div>
   <div class="ws-hero__content">
     <h1>Workshops</h1>
-    <a href="/" class="ws-hero-cta">
-  Coming up soon <span>→</span>
+    <a href="https://hpc-days.github.io/Durham-HPC-Days-2026/workshops/" class="ws-hero-cta">
+  Explore workshops <span>→</span>
 </a>
   </div>
 </section>
@@ -101,8 +92,8 @@ hidden: true
   <div class="ws-meetings-grid ws-hero__grid"></div>
   <div class="ws-hero__content">
     <h1>Meetings</h1>
-    <a href="/" class="ws-hero-cta">
-  Coming up soon <span>→</span>
+    <a href="https://hpc-days.github.io/Durham-HPC-Days-2026/meetings/" class="ws-hero-cta">
+  Explore meetings <span>→</span>
 </a>
   </div>
 </section>
@@ -120,6 +111,59 @@ hidden: true
 </a>
   </div>
 </section>
+
+
+
+
+<section id="featured-sessions" class="fade-in">
+  <h2>🎤 Featured Sessions</h2>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+
+{% assign allowed = "workshop,talk" | split: "," %}
+
+{% assign talks = site.programme-days-2026 
+  | sort: "start_time" 
+  | where_exp: "item", "allowed contains item.category" 
+%}
+  
+      
+      
+            {% for talk in talks %}
+<a href="{{ talk.url }}" class="session-card {{ talk.category | downcase }}">
+  <div class="about-card">
+
+    <div class="card-title">{{ talk.title }}</div>
+
+    <div class="card-details">
+
+      <div class="card-row">
+        <div class="card-text">
+          📅 {{ talk.day }} · {{ talk.start_time }}–{{ talk.end_time }}
+        </div>
+      </div>
+
+      {% if talk.room and talk.room != "TBC" %}
+      <div class="card-row">
+      <div class="card-text"> 📍 {{ talk.room }}</div>
+      </div>
+      {% endif %}
+
+    </div>
+
+
+
+  </div>
+</a>
+      {% endfor %}
+      
+
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -891,11 +935,11 @@ t {
 
 
 .session-card.talk .about-card {
-  border-top-color: #0077cc;  
+  border-top-color: rgba(0, 90, 50, 0.95);  
 }
 
 .session-card.tutorial .about-card {
-  border-top-color: #00a86b;   
+  border-top-color:  rgba(120, 90, 0, 0.95);   
 }
 
 .session-card.keynote .about-card {
@@ -903,7 +947,7 @@ t {
 }
 
 .session-card.workshop .about-card {
-  border-top-color: #e67e22;   
+  border-top-color: rgba(0, 42, 65, 0.92);  
 }
 
 .about-card:hover {
@@ -1091,7 +1135,11 @@ t {
     line-height: 1.6;
   }
 
-
+  #featured-sessions,
+  .carousel-wrapper,
+  .carousel-track {
+    display: none !important;
+  }
 .page__content,
 .page__inner-wrap,
 .wrapper,
@@ -1365,6 +1413,114 @@ document.addEventListener("DOMContentLoaded", () => {
       current += speed;
       wrapper.scrollLeft = current;
 
+
+      if (current >= wrapper.scrollWidth / 2) {
+        current = 0;
+        wrapper.scrollLeft = 0;
+      }
+    }
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  autoScroll(); 
+});
+</script>
+
+
+<script>
+(function() {
+  function onScroll() {
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+    });
+  }
+  document.addEventListener('scroll', onScroll);
+  document.addEventListener('DOMContentLoaded', onScroll);
+})();
+</script>
+
+<script>
+var YT_VIDEO_ID = 'wPjtwACmaUg';
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    width: '100%',
+    height: '100%',
+    videoId: YT_VIDEO_ID,
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      modestbranding: 1,
+      rel: 0,
+      mute: 1,
+      playsinline: 1,
+      loop: 1,
+      playlist: YT_VIDEO_ID,
+      iv_load_policy: 3
+    },
+    events: {
+      onReady: function(e) {
+        try { e.target.mute(); e.target.playVideo(); } catch (err) {}
+      },
+      onStateChange: function(e) {
+        if (e.data === YT.PlayerState.ENDED) {
+          try { e.target.seekTo(0); e.target.playVideo(); } catch (err) {}
+        }
+      }
+    }
+  });
+}
+(function loadYT() {
+  if (window.YT && window.YT.Player) return onYouTubeIframeAPIReady();
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScript = document.getElementsByTagName('script')[0];
+  firstScript.parentNode.insertBefore(tag, firstScript);
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector(".carousel-wrapper");
+  if (!wrapper) return;
+
+  let current = 0;
+  let speed = 0.25;  
+  let isPaused = false;
+  let isDragging = false;
+
+  wrapper.addEventListener("mouseenter", () => isPaused = true);
+  wrapper.addEventListener("mouseleave", () => isPaused = false);
+
+
+  let startX = 0;
+  let scrollStart = 0;
+
+  wrapper.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    scrollStart = wrapper.scrollLeft;
+    wrapper.style.cursor = "grabbing";
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    wrapper.style.cursor = "grab";
+  });
+
+  wrapper.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const dx = e.pageX - startX;
+    wrapper.scrollLeft = scrollStart - dx;
+  });
+
+
+  function autoScroll() {
+    if (!isPaused && !isDragging) {
+      current += speed;
+      wrapper.scrollLeft = current;
 
       if (current >= wrapper.scrollWidth / 2) {
         current = 0;

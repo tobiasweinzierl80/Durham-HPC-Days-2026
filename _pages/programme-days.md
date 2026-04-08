@@ -10,11 +10,7 @@ classes: [full-programme]
 {% assign tracks = "A,B,C" | split: "," %}
 {% assign days_order = "Monday,Tuesday,Wednesday,Thursday,Friday" | split: "," %}
 
-<div class="programme-top-button">
-  <a href="https://hpc-days.github.io/Durham-HPC-Days-2026/programme-week/" class="button-link">
-    See Full Week Programme
-  </a>
-</div>
+
 
 <div class="programme-container">
 

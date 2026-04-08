@@ -2,9 +2,13 @@ main:
   - title: "Register"
     url: /register/
   - title: "Programme"
-    url: /programme-hpcdays-2026/
+    url: /programme-week-2026/
   - title: "Tutorials"
     url: /tutorials/
+  - title: "Workshops"
+    url: /workshops/
+  - title: "Talks"
+    url: /talks/
   - title: "Poster Session"
     url: /posters/
   - title: "Sponsors"

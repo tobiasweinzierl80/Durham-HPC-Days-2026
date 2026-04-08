@@ -298,13 +298,13 @@ linear-gradient(
     <p class="ws-hero__eyebrow">Durham HPC Days 2026</p>
     <h1>Talks</h1>
     <p class="ws-hero__sub">
-    Click on any tutorial below to see details.</p>
+    Click on any talk session below to see details.</p>
   </div>
 </section>
 
 <section class="description">
   <p>
-    Welcome to the Durham HPC Days 2026 tutorials. 
+    Welcome to the Durham HPC Days 2026 talks. 
     Click on any talks below to see details.
   </p>
 </section>
