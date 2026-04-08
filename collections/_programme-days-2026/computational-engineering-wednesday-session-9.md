@@ -31,7 +31,7 @@ speaker: "Ashutosh Shankarrao Londhe, Vahid Jafari, Henrique Bergallo Rocha, Rob
 # Speakers photos (must match order of names above). 
 speaker_photos:
   - "assets/images/generic.jpg"
-  - "assets/images/generic.jpg"
+  - "assets/images/profile/vahid.jpg"
   - "assets/images/generic.jpg"
   - "assets/images/generic.jpg"
 # Speakers profile links (must match order of names above)
